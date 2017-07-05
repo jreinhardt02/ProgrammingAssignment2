@@ -46,17 +46,6 @@ makeCacheMatrix <- function(x = matrix()) {
 ## loads the inverse into memory for later use when used many times.
 ## x is an object of type makeCacheMatrix
 
-## Sample test case
-## source("cachematrix.R")   ## load source
-## a <- matrix( c(5,1,0,3,-1,2,4,0,-1), nrow=3, byrow=TRUE)  ## Create a matrix
-## a      ## display the matrix
-## i <- makeCacheMatrix(a)   ## Instantiate the object with data
-## j <- cacheSolve(i)        ## solve inverse
-## j  ##display inverse matrix  ## display inversse
-## i$set(j)                     ## reset data to new matrix (using inverse)
-## cacheSolve(i)   ## calc and display reversal of inverse should match original
-## cacheSolve(i)   ## display reversal of inverse from cache
-
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
